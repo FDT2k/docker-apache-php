@@ -10,11 +10,7 @@ RUN \
 
 RUN docker-php-ext-configure mysqli
 RUN docker-php-ext-install mysqli
-
-
-
 VOLUME /var/www/html
-
 RUN a2enmod rewrite
 
 EXPOSE 80
