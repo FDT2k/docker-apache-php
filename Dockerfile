@@ -14,6 +14,13 @@ RUN docker-php-ext-configure mysqli
 RUN docker-php-ext-install mysqli
 RUN docker-php-ext-configure mysql
 RUN docker-php-ext-install mysql
+
+RUN docker-php-ext-configure pdo
+RUN docker-php-ext-install pdo
+
+RUN docker-php-ext-configure pdo_mysql
+RUN docker-php-ext-install pdo_mysql
+
 VOLUME /var/www/html
 RUN a2enmod rewrite
 
