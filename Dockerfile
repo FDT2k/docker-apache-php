@@ -8,10 +8,12 @@ RUN \
     docker-php-ext-configure ldap --with-libdir=lib/x86_64-linux-gnu/ && \
     docker-php-ext-install ldap
 
-RUN apt-get install -y php-xml
+#RUN apt-get install -y php-xml
 
 RUN docker-php-ext-configure mysqli
 RUN docker-php-ext-install mysqli
+RUN docker-php-ext-configure mysql
+RUN docker-php-ext-install mysql
 VOLUME /var/www/html
 RUN a2enmod rewrite
 
