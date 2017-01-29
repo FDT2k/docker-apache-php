@@ -16,7 +16,7 @@ RUN docker-php-ext-install mysqli
 RUN docker-php-ext-configure mysql
 RUN docker-php-ext-install mysql
 
-RUN pecl install mailparse
+RUN pecl install mailparse-2.1.6
 
 RUN docker-php-ext-configure pdo
 RUN docker-php-ext-install pdo
