@@ -24,6 +24,8 @@ RUN docker-php-ext-install pdo
 RUN docker-php-ext-configure pdo_mysql
 RUN docker-php-ext-install pdo_mysql
 
+
+RUN docker-php-ext-enable mailparse
 VOLUME /var/www/html
 RUN a2enmod rewrite
 
