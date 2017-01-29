@@ -12,8 +12,12 @@ RUN \
 
 RUN docker-php-ext-configure mysqli
 RUN docker-php-ext-install mysqli
+
 RUN docker-php-ext-configure mysql
 RUN docker-php-ext-install mysql
+
+RUN docker-php-ext-configure mailparse
+RUN docker-php-ext-install mailparse
 
 RUN docker-php-ext-configure pdo
 RUN docker-php-ext-install pdo
