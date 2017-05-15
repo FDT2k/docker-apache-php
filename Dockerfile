@@ -24,6 +24,28 @@ RUN docker-php-ext-install pdo
 RUN docker-php-ext-configure pdo_mysql
 RUN docker-php-ext-install pdo_mysql
 
+RUN docker-php-ext-configure mbstring
+
+RUN docker-php-ext-configure iconv
+
+RUN docker-php-ext-configure xml
+
+RUN docker-php-ext-configure xmlwriter
+
+RUN docker-php-ext-configure zip
+
+
+
+RUN docker-php-ext-install mbstring
+
+RUN docker-php-ext-install iconv
+
+RUN docker-php-ext-install xml
+
+RUN docker-php-ext-install xmlwriter
+
+RUN docker-php-ext-install zip
+
 
 RUN docker-php-ext-enable mailparse
 VOLUME /var/www/html
