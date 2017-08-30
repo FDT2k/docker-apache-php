@@ -37,6 +37,7 @@ RUN docker-php-ext-configure xmlwriter
 
 RUN docker-php-ext-configure zip
 
+RUN docker-php-ext-configure mysqli
 
 
 RUN docker-php-ext-install mbstring
@@ -49,8 +50,13 @@ RUN docker-php-ext-install xmlwriter
 
 RUN docker-php-ext-install zip
 
-
 RUN docker-php-ext-enable mailparse
+
+
+RUN docker-php-ext-install mysqli
+RUN docker-php-ext-enable mysqli
+
+
 VOLUME /var/www/html
 RUN a2enmod rewrite
 
