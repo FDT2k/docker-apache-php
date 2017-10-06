@@ -7,6 +7,7 @@ RUN \
     apt-get install libxml2-dev -y && \
     apt-get install libzip-dev -y && \
     apt-get install phpunit -y && \
+    apt-get install libgmp-dev -y && \
     rm -rf /var/lib/apt/lists/* && \
     docker-php-ext-configure ldap --with-libdir=lib/x86_64-linux-gnu/ && \
     docker-php-ext-install ldap
