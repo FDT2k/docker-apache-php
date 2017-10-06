@@ -25,8 +25,6 @@ RUN docker-php-ext-install mysqli
 
 
 
-RUN pecl install mailparse-2.1.6
-
 
 
 RUN docker-php-ext-configure mbstring
@@ -53,7 +51,6 @@ RUN docker-php-ext-install zip
 
 RUN docker-php-ext-install gmp
 
-RUN docker-php-ext-enable mailparse
 VOLUME /var/www/html
 RUN a2enmod rewrite
 
