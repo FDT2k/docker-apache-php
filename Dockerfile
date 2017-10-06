@@ -12,7 +12,7 @@ RUN \
     docker-php-ext-configure ldap --with-libdir=lib/x86_64-linux-gnu/ && \
     docker-php-ext-install ldap
 
-
+RUN ln -s /usr/include/x86_64-linux-gnu/gmp.h /usr/include/gmp.h
 
 #RUN apt-get install -y php-xml
 
