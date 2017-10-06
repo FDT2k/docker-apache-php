@@ -36,7 +36,7 @@ RUN docker-php-ext-configure xml
 RUN docker-php-ext-configure xmlwriter
 
 RUN docker-php-ext-configure zip
-
+RUN docker-php-ext-configure gmp
 
 
 RUN docker-php-ext-install mbstring
@@ -49,6 +49,7 @@ RUN docker-php-ext-install xmlwriter
 
 RUN docker-php-ext-install zip
 
+RUN docker-php-ext-install gmp
 
 RUN docker-php-ext-enable mailparse
 VOLUME /var/www/html
