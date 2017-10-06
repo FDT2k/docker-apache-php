@@ -7,12 +7,16 @@ RUN \
     apt-get install libxml2-dev -y && \
     apt-get install libzip-dev -y && \
     apt-get install phpunit -y && \
+    apt-get install wget -y && \
     apt-get install libgmp3-dev -y && \
     rm -rf /var/lib/apt/lists/* && \
     docker-php-ext-configure ldap --with-libdir=lib/x86_64-linux-gnu/ && \
     docker-php-ext-install ldap
 
 RUN ln -s /usr/include/x86_64-linux-gnu/gmp.h /usr/include/gmp.h
+
+RUN cd /usr/bin && wget https://phar.phpunit.de/phpunit-6.4.phar
+RUN cd /usr/bin && chmod u+x phpunit-6.4.phar
 
 #RUN apt-get install -y php-xml
 
