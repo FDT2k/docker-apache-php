@@ -23,16 +23,11 @@ RUN cd /usr/bin && chmod u+x phpunit-6.4.phar
 RUN docker-php-ext-configure mysqli
 RUN docker-php-ext-install mysqli
 
-RUN docker-php-ext-configure mysql
-RUN docker-php-ext-install mysql
+
 
 RUN pecl install mailparse-2.1.6
 
-RUN docker-php-ext-configure pdo
-RUN docker-php-ext-install pdo
 
-RUN docker-php-ext-configure pdo_mysql
-RUN docker-php-ext-install pdo_mysql
 
 RUN docker-php-ext-configure mbstring
 
